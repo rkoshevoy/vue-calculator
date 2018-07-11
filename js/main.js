@@ -41,7 +41,6 @@ var calculator = new Vue({
         for (var i = 1; i < digitsArray.length - 1; i++) {
           if (digitsArray[i] == '*' || digitsArray[i] == '/' || digitsArray[i] == '-' || digitsArray[i] == '+') {
             result();
-            screen.value = screen.value + operationSymbol;
           }
         }
       }
@@ -49,10 +48,13 @@ var calculator = new Vue({
       function result() {
         var firstValue, secondValue;
 
+        screen.value = screen.value.slice(0, -1);
+
         function valuesSplit(i) {
           firstValue = digitsArray.slice(0, i).join('');
           secondValue = digitsArray.slice(i + 1, digitsArray.length - 1).join('');
         }
+
 
         for (var i = 0; i < digitsArray.length - 1; i++) {
 
