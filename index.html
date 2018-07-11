@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="calculator-wrapper" id="calculator">
+    <div class="calculator-body">
+      <div class="calculator-screen">
+        <input type="text" id="calculator-screen" value="0" disabled>
+      </div>
+
+      <div class="calculator-buttons">
+        <div class="buttons-left">
+          <ul class="buttons buttons-actions">
+            <li class="button button-wide" @click="clear">C</li>
+            <li class="button button-wide" @click="deleteLast">Del</li>
+          </ul>
+
+          <ul class="buttons buttons-digits">
+            <li id="digit1" class="button" @click="digit(1)">1</li>
+            <li id="digit2" class="button" @click="digit(2)">2</li>
+            <li id="digit3" class="button" @click="digit(3)">3</li>
+            <li id="digit4" class="button" @click="digit(4)">4</li>
+            <li id="digit5" class="button" @click="digit(5)">5</li>
+            <li id="digit6" class="button" @click="digit(6)">6</li>
+            <li id="digit7" class="button" @click="digit(7)">7</li>
+            <li id="digit8" class="button" @click="digit(8)">8</li>
+            <li id="digit9" class="button" @click="digit(9)">9</li>
+            <li id="digit0" class="button button-zero" @click="digit(0)">0</li>
+            <li id="digit0" class="button" @click="digit('.')">.</li>
+          </ul>
+        </div>
+
+        <div class="buttons-right">
+          <ul class="buttons buttons-operations">
+            <li class="button" @click="operation('*')">*</li>
+            <li class="button" @click="operation('/')">/</li>
+            <li class="button" @click="operation('-')">-</li>
+            <li class="button" @click="operation('+')">+</li>
+            <li class="button" @click="operation('=')">=</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
