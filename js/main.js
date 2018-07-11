@@ -55,7 +55,6 @@ var calculator = new Vue({
           secondValue = digitsArray.slice(i + 1, digitsArray.length - 1).join('');
         }
 
-
         for (var i = 0; i < digitsArray.length - 1; i++) {
 
           switch (digitsArray[i]) {
