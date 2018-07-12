@@ -16,7 +16,7 @@
     <div class="calculator-body">
       <div class="calculator-screen-wrapper">
         <div class="calculator-screen">
-          <input type="text" id="calculator-screen" value="0" disabled>
+          <input type="text" v-model="result" disabled>
         </div>
       </div>
 
@@ -28,17 +28,17 @@
           </ul>
 
           <ul class="buttons buttons-digits">
-            <li id="digit1" class="button" @click="digit(1)">1</li>
-            <li id="digit2" class="button" @click="digit(2)">2</li>
-            <li id="digit3" class="button" @click="digit(3)">3</li>
-            <li id="digit4" class="button" @click="digit(4)">4</li>
-            <li id="digit5" class="button" @click="digit(5)">5</li>
-            <li id="digit6" class="button" @click="digit(6)">6</li>
-            <li id="digit7" class="button" @click="digit(7)">7</li>
-            <li id="digit8" class="button" @click="digit(8)">8</li>
-            <li id="digit9" class="button" @click="digit(9)">9</li>
-            <li id="digit0" class="button button-zero" @click="digit(0)">0</li>
-            <li id="digit0" class="button" @click="digit('.')">.</li>
+            <li class="button" @click="digit(1)">1</li>
+            <li class="button" @click="digit(2)">2</li>
+            <li class="button" @click="digit(3)">3</li>
+            <li class="button" @click="digit(4)">4</li>
+            <li class="button" @click="digit(5)">5</li>
+            <li class="button" @click="digit(6)">6</li>
+            <li class="button" @click="digit(7)">7</li>
+            <li class="button" @click="digit(8)">8</li>
+            <li class="button" @click="digit(9)">9</li>
+            <li class="button button-zero" @click="digit(0)">0</li>
+            <li class="button" @click="digit('.')">.</li>
           </ul>
         </div>
 
